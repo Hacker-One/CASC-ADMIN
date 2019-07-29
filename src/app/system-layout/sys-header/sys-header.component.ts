@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../system/share/http.service';
 import { environment } from './../../../environments/environment';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { GlobalState } from '../../../app/global.state';
 
 @Component({
@@ -16,7 +16,6 @@ export class SysHeaderComponent implements OnInit {
 
   ngOnInit() {
     this.getTopMenu();
-
   }
 
   getTopMenu() {
