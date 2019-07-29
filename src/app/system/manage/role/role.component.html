@@ -1,0 +1,66 @@
+<div class="search-box mb-20">
+  <div class="form-group row">
+    <label for="account" class="col-sm-1 col-form-label">账号</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="account" placeholder="">
+    </div>
+    <label for="account" class="col-sm-1 col-form-label">姓名</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="account" placeholder="">
+    </div>
+    <label for="account" class="col-sm-1 col-form-label">邮箱</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="account" placeholder="">
+    </div>
+    <label for="account" class="col-sm-1 col-form-label">电话</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="account" placeholder="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-right pr-0">
+      <button class="btn-z primary mr-10"><i class="icon iconfont iconsearch"></i>查询</button>
+      <button class="btn-z primary"><i class="icon iconfont iconrefresh"></i>重置</button>
+    </div>
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>角色</th>
+      <th>角色编码</th>
+      <th>域</th>
+      <th>状态</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container>
+      <tr>
+        <th scope="row">1</th>
+        <td>role</td>
+        <td>x101</td>
+        <td>zwe</td>
+        <td>有效</td>
+        <td>
+          <a href="javascript:void(0)" (click)="authorityDialog = true">详情</a>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+<ql-dialog [(visible)]="authorityDialog">
+  <ng-template #title>
+    <span>角色信息</span>
+  </ng-template>
+  <ql-tree [model]="data3" [show-checkbox]="true" #tree> </ql-tree>
+  <!-- <ql-button (click)="updateItemChecked()">更新选中</ql-button>
+  <ql-button (click)="findAllChecked()">获取所有选中</ql-button> -->
+  <ng-template #footer>
+    <ql-button type="success" (click)="authorityDialog = false">确定</ql-button>
+    <ql-button (click)="authorityDialog = false">取消</ql-button>
+  </ng-template>
+</ql-dialog>

@@ -1,0 +1,48 @@
+header{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 138px;
+    background-image: url("../../../assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center top;
+    position: relative;
+    min-width: 996px;
+    .img-logo{
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        width: 20%;
+        height: auto;
+    }
+    .nav-con{
+        width:100%;
+        background: #316799;
+        position: absolute;
+        bottom:0;
+        z-index: 9;
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        .fir-nav {
+            float:left;
+            width:10%;
+            text-align:center;
+        }
+        a {
+            font-size: 1.6rem;
+            color:#fff;
+            display:block;
+            width:100%;
+            background:#316799;
+            height: 40px;
+        }
+        a:hover{
+            background:#2b7ac3;
+        }
+    }
+}
+
+.hoverActive{
+    display: none;
+}

@@ -1,0 +1,43 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            DatePicker 日期选择器
+            <small>用于选择或输入日期。</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">选择日</h3>
+    <p>以「日」为基本单位，基础的日期选择控件。</p>
+    <ex-demo  [code]="code[0]" [class]="exClass" notes="你可以在 <code>[model]</code>
+中定义一个初始值，如果留空，则优先显示当前时间。">
+    </ex-demo>
+
+    <h3 class="mt-5">日期格式</h3>
+    <p>预定义日期格式</p>
+    <ex-demo  [code]="code[1]" [class]="exClass" notes=" <code>[format]</code>
+属性非常强大，你可以发挥自己的想象力来定义它的格式。">
+    </ex-demo>
+
+    <h3 class="mt-5">以月为单位</h3>
+    <p>隐藏日期，以月为单位选择</p>
+    <ex-demo  [code]="code[2]" [class]="exClass" notes=" <code>[hidden-day]</code>
+可以隐藏日期的基本单位，同时你可以通过 format 来统一输出格式。">
+    </ex-demo>
+
+    <h3 class="mt-5">禁用</h3>
+    <p>禁用整个日期组件</p>
+    <ex-demo  [code]="code[3]" [class]="exClass">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>
+

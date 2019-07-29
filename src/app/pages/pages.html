@@ -1,0 +1,11 @@
+<ba-sidebar></ba-sidebar>
+<ba-page-top></ba-page-top>
+<ba-pageTop-tab [tabs]="tabs">
+</ba-pageTop-tab>
+<div class="al-main" [ngClass]="{'al-main-top':(!tabs||tabs.length==0)}">
+  <div class="al-content">
+      <ba-content-top></ba-content-top>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+<ba-back-top position="100"></ba-back-top>

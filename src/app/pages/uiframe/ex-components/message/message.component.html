@@ -1,0 +1,53 @@
+<ql-card class="box-card">
+    <div class="card-title mb-5">
+        <h2>
+            Message 消息提示
+        </h2>
+    </div>
+
+    <div class="help-standard-content">
+        <ul class="mt-4">
+            <li>用于主动操作后的反馈提示和API接口反馈的信息。与 Notification 的区别是后者更多用于系统级通知的被动提醒和Kafka队列消息。</li>
+            <li>默认情况下，文字都采用左对齐方式显示。</li>
+            <li>消息提示的字数控制在50以内。</li>
+        </ul>
+    </div>
+
+    <h3 class="mt-5">基础用法</h3>
+    <p>从顶部出现，3 秒后自动消失。</p>
+    <ex-demo [code]="code[0]" [class]="exClass" notes="<code>QlMessageService</code> 仅仅是一个服务，
+不需要在模板中注册任何组件插槽，它会创建一个虚拟组件用于显示，并且在合适的时候注销。你完全不用担心模板与生命周期的问题。">
+    </ex-demo>
+
+    <h3 class="mt-5">不同状态</h3>
+    <p>用来显示「成功、警告、消息、错误」类的操作反馈。</p>
+    <ex-demo [code]="code[1]" [class]="exClass" notes="服务默认的类型是 <code>info</code>">
+    </ex-demo>
+
+
+    <h3 class="mt-5">可关闭</h3>
+    <p>可以添加关闭按钮。</p>
+    <ex-demo [code]="code[2]" [class]="exClass" notes="<code>service.setOptions</code>
+接受一个对象，用于更全面的设置提示消息，具体参数可见页面下方的文档。">
+    </ex-demo>
+
+
+    <!--<h3 class="mt-5">居中</h3>-->
+    <!--<ex-demo [code]="code[4]" [class]="exClass">-->
+    <!--</ex-demo>-->
+
+
+    <h3 class="mt-5">引用说明</h3>
+    <p>你只需要在合适的地方加上：</p>
+    <pre><code class="hljs" [innerHTML]="code[3] | highlightAuto"></code></pre>
+    <p>即可使用，<b>无需</b> 在任何地方额外声明 <code>providers</code>依赖。<br/>同时触发多个消息提示会自动往上叠加，每个消息是相互独立的，同时它们在结束时都会自动销毁。</p>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

@@ -1,0 +1,12 @@
+<main [class.menu-collapsed]="isMenuCollapsed">
+  <div class="additional-bg" style="background: red;"></div>
+  <app-sys-header></app-sys-header>
+  <div class="app-content">
+    <app-sys-siderbar></app-sys-siderbar>
+    <section class="main-content">
+      <app-path-nav></app-path-nav>
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+  <!-- <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="large" color="#fff" type="ball-8bits"></ngx-spinner> -->
+</main>

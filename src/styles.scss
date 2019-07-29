@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~swiper/dist/css/swiper.min.css';
+@import "./app/style/config/config";
+@import "./app/style/bootstrap/bootstrap";
+@import '~highlight.js/styles/github.css';
+@import "./app/style/common/overrides";
+@import "./app/style/theme-default/index";
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('./assets/fonts/iconfont.eot');
+    src: url('./assets/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/iconfont.woff2') format('woff2'),
+         url('./assets/fonts/iconfont.woff') format('woff'),
+         url('./assets/fonts/iconfont.ttf') format('truetype'),
+         url('./assets/fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.pr-0 {
+    padding-right: 0;
+}
+.pl-0 {
+    padding-left: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ql-button {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.btn-z {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #fff;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    transition: .1s;
+    font-weight: 400;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 6px 18px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.btn-z.primary {
+    background-color: #2E649D;
+    border: 1px solid #2E649D;
+    border-color: #2E649D;
+}
+.btn-z.primary:hover {
+    background-color: rgb(59, 109, 163);
+}

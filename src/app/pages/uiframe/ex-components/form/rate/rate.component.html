@@ -1,0 +1,39 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Rate 评分
+            <small>评分组件</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">基础用法</h3>
+    <ex-demo  [code]="code[0]">
+    </ex-demo>
+
+
+    <h3 class="mt-5">辅助文字</h3>
+    <p>用辅助文字直接地表达对应分数。</p>
+    <ex-demo  [code]="code[1]" notes="设置 <code>[show-text]</code> 属性会在右侧显示辅助文字">
+    </ex-demo>
+
+    <h3 class="mt-5">其它 icon</h3>
+    <p>当有多层评价时，可以用不同类型的 icon 区分评分层级</p>
+    <ex-demo  [code]="code[2]">
+    </ex-demo>
+
+    <h3 class="mt-5">只读</h3>
+    <p>只读的评分用来展示分数。</p>
+    <ex-demo  [code]="code[3]" notes="为组件设置 <code>qlDisabled</code> 属性表示组件为只读">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

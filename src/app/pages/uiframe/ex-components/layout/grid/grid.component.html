@@ -1,0 +1,38 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Grid 栅格
+            <small>这是一个 <a href="https://angular.cn/guide/attribute-directives" target="_blank">属性型指令</a>，它可以被用在任何元素上。通过基础的 24 分栏，迅速简便地创建布局。</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">基础布局</h3>
+    <p>使用单一分栏创建基础的栅格布局。</p>
+    <ex-demo [code]="code[0]"  notes="<code>ql-row</code> 与 <code>ql-col</code> 可以被轻易的运用在任何元素上，这些指令使元素具备额外的能力。">
+    </ex-demo>
+
+    <h3 class="mt-5">分栏间隔</h3>
+    <p>卡片可以只有内容区域。</p>
+    <ex-demo [code]="code[1]"  notes="当属性的值固定时，也可以直接传入模板字符串。 如 <code>gutter=&quot;20&quot;</code>">
+    </ex-demo>
+
+    <h3 class="mt-5">混合布局</h3>
+    <p>通过基础的 1/24 分栏任意扩展组合形成较为复杂的混合布局。</p>
+    <ex-demo [code]="code[2]" >
+    </ex-demo>
+
+    <h3 class="mt-5">对齐方式</h3>
+    <ex-demo [code]="code[3]"  notes="将 <code>type</code> 属性赋值为 'flex'，可以启用 flex 布局，并可通过 <code>justify</code> 属性来指定 start, center, end, space-between, space-around 其中的值来定义子元素的排版方式。">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

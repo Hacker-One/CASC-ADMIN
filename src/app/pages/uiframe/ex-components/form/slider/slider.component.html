@@ -1,0 +1,43 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Slider 滑块
+            <small>通过拖动滑块在一个固定区间内进行选择。</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">基础用法</h3>
+    <p>在拖动滑块时，显示当前值。</p>
+    <ex-demo  [code]="code[0]" [class]="exClass">
+    </ex-demo>
+
+    <h3 class="mt-5">自定义初始值</h3>
+    <ex-demo  [code]="code[1]" [class]="exClass">
+    </ex-demo>
+
+    <h3 class="mt-5">隐藏 Tooltip</h3>
+    <p>不显示数字提示。</p>
+    <ex-demo  [code]="code[2]" [class]="exClass">
+    </ex-demo>
+
+    <h3 class="mt-5">最小值与最大值</h3>
+    <p>手动设置最小值与最大值。</p>
+    <ex-demo  [code]="code[3]" [class]="exClass">
+    </ex-demo>
+
+    <h3 class="mt-5">竖向模式</h3>
+    <ex-demo  [code]="code[4]" [class]="exClass">
+    </ex-demo>
+
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

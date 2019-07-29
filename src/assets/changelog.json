@@ -1,0 +1,63 @@
+{
+  "releases": [
+    {
+      "version": "1.0.0",
+      "date": "31 oct. 2018",
+      "link": null,
+      "events": [
+        {
+          "description": "代码初始化 "
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "05 nov. 2018",
+      "link": null,
+      "events": [
+        {
+          "description": "去除对jquery依赖，添加预加载项，完善打包，解决访问响应速度慢等问题 "
+        }
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "15 nov. 2018",
+      "link": null,
+      "events": [
+        {
+          "description": "添加socket支持 "
+        },
+        {
+          "description": "angular模块依赖文件清理，新增node koa2模版框架"
+        }
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "11 mars 2019",
+      "link": null,
+      "events": [
+        {
+          "description": "新增操作指南"
+        },
+        {
+          "description": "框架优化添加iframe支持 "
+        },
+        {
+          "description": "前端统一平台  "
+        },
+        {
+          "description": "提交对universal的node支持的angular版本 "
+        },
+        {
+          "description": "热部署插件优化 "
+        },
+        {
+          "description": "优化部署打包 "
+        }
+      ]
+    }
+  ]
+}
+

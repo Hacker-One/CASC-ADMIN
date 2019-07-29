@@ -1,0 +1,38 @@
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            文字规范
+            <small class="text-muted">文字字体样式适用场景的介绍，以及各字号对应的行高以及适用场景。</small>
+        </h2>
+    </div>
+    <ul class="mt-5">
+        <li>
+            APP Web端所有默认字体使用无衬线字体：<code>$font-family-base</code>,&nbsp;<code>$font-family-sans-serif</code>，
+        </li>
+        <li>
+            windows及mac、linux等系统的字体排序为 “-apple-system, BlinkMacSystemFont, " Helvetica", Arial, "SimHei", sans-serif”
+        </li>
+        <li>
+            本框架根元素<code>&lt;html&gt;</code>中的font-size为10px，前端开发人员在开发时应注意，对浏览器页面缩放时同步缩放的元素应该采用rem来替换px表示单位。<br/>
+
+            <ql-table [model]="tableData1" [border]="true" [stripe]="true">
+                <ql-table-column model-key="px" label="px" width="140">
+                </ql-table-column>
+                <ql-table-column model-key="rem" label="rem" width="140">
+                </ql-table-column>
+            </ql-table>
+        </li>
+    </ul>
+
+    <ql-table [model]="tableData2" [border]="true" [stripe]="true">
+        <ql-table-column model-key="style" label="样式" width="200" [render-html]="true">
+        </ql-table-column>
+        <ql-table-column model-key="size" label="字号" width="200">
+        </ql-table-column>
+        <ql-table-column model-key="lineHeight" label="建议行高" width="200">
+        </ql-table-column>
+        <ql-table-column model-key="apply" label="适用场景">
+        </ql-table-column>
+    </ql-table>
+    <div class="mt-5">等宽字体：<code>$font-family-monospace</code> 用于代码片段等适用场景</div>
+</ql-card>

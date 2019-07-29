@@ -1,0 +1,126 @@
+<div ql-row gutter="15">
+    <div ql-col [span]="20">
+        <router-outlet></router-outlet>
+    </div>
+    <div ql-col [span]="4">
+        <ql-card>
+            <ul>
+                <li class="li-group">UI元素</li>
+                <li><a [routerLink]="['breadcrumb']">路径导航</a></li>
+                <li><a [routerLink]="['card']">卡片</a></li>
+                <li><a [routerLink]="['button']">按钮</a></li>
+                <li><a [routerLink]="['dropdown']">下拉菜单</a></li>
+                <li><a [routerLink]="['table']">表格</a></li>
+                <li><a [routerLink]="['pagination']">分页</a></li>
+                <li><a [routerLink]="['collapse']">折叠面板</a></li>
+                <li><a [routerLink]="['badge']">标记</a></li>
+                <li><a [routerLink]="['tag']">标签</a></li>
+                <li><a [routerLink]="['menu']">导航菜单</a></li>
+                <li><a [routerLink]="['progress']">进度条</a></li>
+                <li><a [routerLink]="['steps']">步骤条</a></li>
+                <li><a [routerLink]="['tree']">树型控件</a></li>
+                <li><a [routerLink]="['loading']">加载</a></li>
+                <li><a [routerLink]="['carouse']">幻灯片</a></li>
+                <li class="li-group">表单</li>
+                <li><a [routerLink]="['input']">输入框</a></li>
+                <li><a [routerLink]="['radio']">单选框</a></li>
+                <li><a [routerLink]="['checkbox']">多选框</a></li>
+                <li><a [routerLink]="['datepicker']">日期选择器</a></li>
+                <li><a [routerLink]="['select']">选择器</a></li>
+                <li><a [routerLink]="['casader']">级联选择器</a></li>
+                <li><a [routerLink]="['inputnumber']">计数器</a></li>
+                <li><a [routerLink]="['rate']">评分</a></li>
+                <li><a [routerLink]="['slider']">滑块</a></li>
+                <li><a [routerLink]="['switch']">开关</a></li>
+                <li><a [routerLink]="['upload']">上传</a></li>
+                <li class="li-group">消息&提示</li>
+                <li><a [routerLink]="['message']">消息提示</a></li>
+                <li><a [routerLink]="['notification']">通知</a></li>
+                <li><a [routerLink]="['tooltip']">文字提示</a></li>
+                <li><a [routerLink]="['dialog']">对话框</a></li>
+            </ul>
+        </ql-card>
+    </div>
+</div>
+
+
+
+<!--<ex-button></ex-button>
+<ex-form></ex-form>
+<ex-table></ex-table>
+<ex-badge></ex-badge>
+<ex-tag></ex-tag>
+<ex-card></ex-card>-->
+<!--
+<ex-progress></ex-progress>
+<ex-pagination></ex-pagination>
+<ex-tree></ex-tree>
+<ex-breadcrumb></ex-breadcrumb>
+<ex-dropdown></ex-dropdown>
+<ex-menu></ex-menu>
+<ex-steps></ex-steps>
+<ex-loading></ex-loading>
+<ex-message></ex-message>
+<ex-notification></ex-notification>
+<ex-carousel></ex-carousel>
+<ex-collapse></ex-collapse>
+<ex-dialog></ex-dialog>
+<ex-tooltip></ex-tooltip>
+<ex-input></ex-input>
+<ex-cascader></ex-cascader>
+<ex-radio></ex-radio>
+<ex-checkbox></ex-checkbox>
+<ex-date-picker></ex-date-picker>
+<ex-input-number></ex-input-number>
+<ex-rate></ex-rate>
+<ex-select></ex-select>
+<ex-slider></ex-slider>
+<ex-switch></ex-switch>
+<ex-upload></ex-upload>
+<ql-card class="box-card ">
+    <div class="card-title mb-5">
+        <h2>
+            <span class="title-prefix">04</span>
+            弹框
+        </h2>
+    </div>
+    <ul class="mb-5">
+        <li>toast若提示建议停留时间3s，可根据文字多少适当调整停留时间，文字建议不超过30字。</li>
+        <li>底部功能按钮建议数量不超过3个</li>
+        <li>要尽量避免在弹框上再弹一层弹框，可以改用轻量弹框(下拉浮框的方式)或重新把交互梳理</li>
+        <li>侧滑窗一固定宽度400px，浮在主体内容的上方，点击滑窗以外的区域隐藏（当内容被编辑过鼠标点击其它区域时需要提醒用户是否保存）</li>
+    </ul>
+</ql-card>
+<ql-card class="box-card ">
+    <div class="card-title mb-5">
+        <h2>
+            <span class="title-prefix">05</span>
+            切换标签&历史切页
+        </h2>
+    </div>
+</ql-card>
+<ql-card class="box-card ">
+    <div class="card-title mb-5">
+        <h2>
+            <span class="title-prefix">06</span>
+            图标
+            <small>第三方开源icon，自设计icon</small>
+        </h2>
+    </div>
+    <ul class="mb-5">
+        <li>本框架引用两个图标库，一个是font Awesome图标库（fontawesome.com）,一个是自建图标库。如果开发过程中没有合适的图标，请联系本框架维护和设计人员设计新的图标，在新自建图标库更新之前，请先使用默认的图标库中的图标替代。</li>
+        <li>Font Awesome的图标库示例地址：<a href="https://fontawesome.com/cheatsheet?from=io">https://fontawesome.com/cheatsheet?from=io</a></li>
+        <li>请不要自行引入其他第三方图标库，也请勿用位图制作临时的CSS图标样式。</li>
+    </ul>
+</ql-card>
+<ql-card class="box-card ">
+    <div class="card-title mb-5">
+        <h2>
+            <span class="title-prefix">07</span>
+            缺省页&缺省图
+            <small>搜索无结果，暂无数据， 没有访问权限</small>
+        </h2>
+    </div>
+    <div class=""></div>
+</ql-card>
+-->

@@ -1,0 +1,43 @@
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Pagination 分页
+            <small>当数据量过多时，使用分页分解数据。</small>
+        </h2>
+    </div>
+    <div class="help-standard-content">
+        <ul class="mt-3">
+            <li>属性 <code>layout</code> 共有 6 个参数，分别代表不同子组件 (功能)，默认不显示调整每页显示条数的功能。</li>
+            <li>在列表或者表格的宽度不够显示完整分页功能时，使用小型分页，根据宽度决定是否显示页码总数和跳页</li>
+        </ul>
+    </div>
+
+    <h3 class="mt-5">基础用法</h3>
+    <ex-demo [code]="code[0]" notes="设置 <code>layout</code>，
+表示需要显示的内容，用逗号分隔，布局元素会依次显示。 <code>prev</code>表示上一页， <code>next</code>为下一页， <code>pager</code>表示页码列表。
+            除此以外还提供了 <code>jumper</code>和 <code>total</code>， <code>size</code>。
+            <code>jumper</code>表示跳页元素， <code>total</code>表示显示页码总数， <code>size</code>用于设置每页显示的页码数量。">
+    </ex-demo>
+
+
+    <h3 class="mt-5">小型分页</h3>
+    <p>根据场景需要，可以添加其他功能模块。</p>
+    <ex-demo [code]="code[1]">
+    </ex-demo>
+    <!--
+        <h3 class="mt-5">附加功能</h3>
+        <ul class="mt-3">
+            <li>根据场景需要，可以添加其他功能模块。</li>
+        </ul>
+        <ex-demo  [code]="code[2]" notes="当你打开自由控制分页数量参数 <code>size</code>时，你可以使用 <code>page-sizes</code> 来调整具体的选项，详见文末的属性表。">
+        </ex-demo>-->
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

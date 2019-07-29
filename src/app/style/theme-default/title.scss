@@ -1,0 +1,26 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(title) {
+  position: relative;
+  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    line-height: 30px;
+  }
+  small {
+    font-size: $font-size-base;
+    color: $sub-text;
+  }
+  .title-prefix {
+    font-size: $font-size-h1;
+    margin-right: 10px;
+  }
+  &:before {
+    content: '';
+    width: 4px;
+    height: 30px;
+    background: $warning;
+    position: absolute;
+    //top: 10px;
+    left: -21px;
+  }
+}

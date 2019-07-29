@@ -1,0 +1,11 @@
+<svg id="QloudLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 40">
+    <defs>
+        <style>
+            .logo-text{font-size:18px;fill:#0099CC;font-family:Arial-Black, ArialBlack;letter-spacing:0em;}
+            .logo-shape{fill:#006699;}
+        </style>
+    </defs>
+    <text class="logo-text" transform="translate(18 35)">Ui
+    </text>
+    <path class="logo-shape" d="M14,31A13.64,13.64,0,1,1,31.52,19.5h3.9c0-.5.08-1,.08-1.5A17.5,17.5,0,1,0,14,35Z" transform="translate(0 0)"/>
+</svg>

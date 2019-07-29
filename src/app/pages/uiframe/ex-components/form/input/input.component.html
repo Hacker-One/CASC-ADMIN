@@ -1,0 +1,51 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Input 输入框
+            <small>通过鼠标或键盘输入字符</small>
+        </h2>
+    </div>
+
+    <h3 class="mt-5">基础用法</h3>
+    <ex-demo  [code]="code[0]">
+    </ex-demo>
+
+    <h3 class="mt-5">禁用状态</h3>
+    <ex-demo  [code]="code[1]" notes="通过 <code>qlDisabled</code> 属性指定是否禁用 input 组件">
+    </ex-demo>
+
+    <h3 class="mt-5">带 icon 的输入框</h3>
+    <p>带有图标标记输入类型</p>
+    <ex-demo  [code]="code[2]" notes="通过 <code>icon</code> 属性在 input 组件尾部增加显示图标">
+    </ex-demo>
+
+    <h3 class="mt-5">文本域</h3>
+    <p>用于输入多行文本信息，通过将 <code>type</code> 属性的值指定为 textarea。</p>
+    <ex-demo  [code]="code[3]" notes="文本域高度可通过 <code>rows</code> 属性控制">
+    </ex-demo>
+
+    <h3 class="mt-5">可自适应文本高度的文本域</h3>
+    <p>通过设置 <code>autosize</code> 属性可以使得文本域的高度能够根据文本内容自动进行调整，并且 <code>autosize</code> 还可以设定为一个对象，指定最小行数和最大行数</p>
+    <ex-demo  [code]="code[4]">
+    </ex-demo>
+    <h3 class="mt-5">复合型输入框</h3>
+        <p>可前置或后置元素，一般为标签或按钮</p>
+    <ex-demo  [code]="code[5]">
+    </ex-demo>
+
+    <h3 class="mt-5">尺寸</h3>
+    <p>除了默认的大小外，提供了另外small 和 mini 两种尺寸<br/>
+        small和mini一般用在行间距比较小的工具条中或表格内使用</p>
+    <ex-demo  [code]="code[6]" notes="可通过 <code>size</code> 属性指定输入框的尺寸">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

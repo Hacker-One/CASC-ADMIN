@@ -1,0 +1,27 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Breadcrumb 路径导航
+            <small>显示当前页面的路径，快速返回之前的任意页面。</small>
+        </h2>
+    </div>
+    <div class="help-standard-content">
+    <ul class="mt-3">
+        <li>当前tab导航页面下，如果页面层级深度超过3个及以上，需要增加路径导航条。</li>
+        <li>默认使用<code>separator-class="ql-icon-arrow-right"</code>的分隔符。</li>
+    </ul>
+    </div>
+    <ex-demo  [code]="code[0]" [class]="exClass" notes="设置 <code>prevent</code> 会阻止组件默认的跳转，
+你可以从 <code>(next)</code> 事件中收集每次跳转的路径。">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

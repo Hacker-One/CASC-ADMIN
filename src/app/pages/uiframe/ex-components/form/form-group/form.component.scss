@@ -1,0 +1,14 @@
+.form-demo {
+  form {
+    width: 460px;
+
+    ql-input .ql-input {
+      margin-right: 10px;
+      width: 270px;
+      vertical-align: top;
+    }
+    ql-cascader .ql-input {
+      width: 150px;
+    }
+  }
+}

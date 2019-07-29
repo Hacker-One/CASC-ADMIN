@@ -1,0 +1,33 @@
+<ql-card class="box-card ">
+    <div class="card-title mb-5">
+        <h2>
+            表单
+        </h2>
+    </div>
+
+    <h3 class="mt-5">输入框表单</h3>
+    <p>除了显示错误反馈之外，携带输入框的表单还能显示相应的图标。</p>
+    <ex-demo [code]="code[0]" [class]="exClass"></ex-demo>
+
+    <h3 class="mt-5">包含多种元素的表单</h3>
+    <p>包括各种表单项，比如输入框、选择器、开关、单选框、多选框等。</p>
+    <ex-demo [code]="code[1]" [class]="exClass"></ex-demo>
+
+    <h3 class="mt-5">对齐方式</h3>
+    <p>根据具体目标和制约因素，选择最佳的标签对齐方式。</p>
+    <ex-demo [code]="code[2]" [class]="exClass"></ex-demo>
+
+    <h3 class="mt-5">行内表单</h3>
+    <p>当垂直方向空间受限且表单较简单时，可以在一行内放置表单。</p>
+    <ex-demo [code]="code[3]" [class]="exClass"></ex-demo>
+
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

@@ -1,0 +1,23 @@
+<ql-card class="box-card buttons-style">
+
+    <div class="card-title mb-5">
+        <h2>
+            更新日志
+        </h2>
+    </div>
+    <div class="page-changelog" *ngIf="logs">
+        <ul class="timeline" ref="timeline">
+            <li *ngFor="let release of logs.releases">
+                <h3>
+                    <a [href]="makeSafeUrl(release.link)" target="_blank">{{release.version}}</a>
+                </h3>
+                <p><em>{{release.date}}</em></p>
+                <ul>
+                    <li *ngFor="let event of release.events">
+                        {{event.description}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</ql-card>

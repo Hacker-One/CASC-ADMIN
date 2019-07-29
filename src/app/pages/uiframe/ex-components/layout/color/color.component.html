@@ -1,0 +1,95 @@
+<ql-card class="box-card">
+    <div class="card-title mb-5">
+        <h2>
+            颜色
+        </h2>
+    </div>
+    <div class="help-standard-content">
+        <ul class="mt-4">
+            <li>APP界面所有颜色的定义，对于样式编写人员来说，框架内所有颜色的取值都只能在该列表内取色值相对应SASS变量名称，不得增加自定义色值。</li>
+            <li>如果产品特殊需要增加 <b>单页面</b> 中一些元素颜色，所应用的颜色不能超过界面元素的30%。</li>
+            <li>如果产品特殊需要增加 <b>多页面</b> 中一些元素颜色，需要截图并标注提交到UI框架维护人员处，等待审核通过后重新引用新版本样式。</li>
+            <li>SASS变量中会有一些不同名称的变量使用一些相同色值的情况，在不同元素引用时应以变量名定义的适用范围使用相应的变量名。</li>
+        </ul>
+    </div>
+    <h3 class="mt-5">
+        主色
+    </h3>
+    <p>Qloud主要品牌颜色针对金融行业背景采用了代表沉稳、创新、友好的蓝紫色。</p>
+    <div ql-row gutter="12">
+        <div ql-col [span]="4">
+            <div class="demo-color-box bg-primary">$primary<div class="value">#4d4172</div></div>
+        </div>
+    </div>
+    <h3 class="mt-5">
+        副色
+    </h3>
+    <p>副色采用代表货币、活力、流通特性的橙色，与主品牌蓝紫色产生对比，在大面积应用的主色调中产生更加醒目的提示作用。</p>
+    <div ql-row gutter="20">
+        <div ql-col [span]="4">
+            <div class="demo-color-box bg-secondary">$secondary<div class="value">#f69f00</div></div>
+        </div>
+    </div>
+    <h3 class="mt-5">
+        辅助色
+    </h3>
+    <p>对比色采用代表货币、活力、流通特性的橙色，与主品牌蓝紫色产生对比，在大面积应用的主色调中产生更加醒目的提示作用。</p>
+    <div ql-row gutter="20">
+        <div ql-col [span]="4">
+            <div class="demo-color-box bg-info">$info<div class="value">#4fb5dd</div></div>
+        </div>
+        <div ql-col [span]="4">
+            <div class="demo-color-box bg-success">$success<div class="value">#76ab3c</div></div>
+        </div>
+        <div ql-col [span]="4">
+            <div class="demo-color-box bg-warning">$warning<div class="value">#f69f00</div></div>
+        </div>
+        <div ql-col [span]="4">
+            <div class="demo-color-box bg-danger">$danger<div class="value">#eb3840</div></div>
+        </div>
+    </div>
+    <h3 class="mt-5">
+        侧边导航栏
+    </h3>
+    <div class="help-standard-content">
+        <ul class="mt-4">
+            <li>导航栏菜单中文字的数量不要超过120px宽度(超出则会显示省略)</li>
+            <li>菜单图标默认使用2个字母简写表示，首字母大写。最多不能超过3个字母。</li>
+        </ul>
+    </div>
+    <div ql-row gutter="12">
+        <div ql-col span="6">
+            <div class="demo-color-box-group">
+                <div class="demo-color-box bg-dark">$dark<div class="value">#566a89</div></div>
+                <div class="demo-color-box bg-darker">$darker<div class="value">#292f43</div></div>
+                <div class="demo-color-box bg-darkest">$darkest<div class="value">#1b2431</div></div>
+            </div>
+        </div>
+        <div ql-col span="6">
+            <div class="demo-color-box-group">
+                <div class="demo-color-box color-dark bg-light">$light<div class="value">#dbe0e4</div></div>
+                <div class="demo-color-box color-dark bg-lighter">$lighter<div class="value">#eef0f2</div></div>
+                <div class="demo-color-box color-dark bg-lightest">$lightest<div class="value">#f6f8fa</div></div>
+            </div>
+        </div>
+        <!--<div ql-col span="6">
+            <div class="demo-color-box-group">
+                <div class="demo-color-box color-dark bg-gray-100">$gray-100<div class="value">#f8f8f8</div></div>
+                <div class="demo-color-box color-dark bg-gray-200">$gray-200<div class="value">#efefef</div></div>
+                <div class="demo-color-box color-dark bg-gray-300">$gray-300<div class="value">#dedede</div></div>
+                <div class="demo-color-box color-dark bg-gray-400">$gray-400<div class="value">#cccccc</div></div>
+                <div class="demo-color-box color-dark bg-gray-500">$gray-500<div class="value">#b4b4b4</div></div>
+                <div class="demo-color-box bg-gray-600">$gray-600<div class="value">#999999</div></div>
+                <div class="demo-color-box bg-gray-700">$gray-700<div class="value">#808080</div></div>
+                <div class="demo-color-box bg-gray-800">$gray-800<div class="value">#666666</div></div>
+                <div class="demo-color-box bg-gray-900">$gray-900<div class="value">#333333</div></div>
+            </div>
+        </div>-->
+        <div ql-col span="6">
+            <div class="demo-color-box-group" style="border: 1px solid #e0e6ed;border-radius: 4px;">
+                <div class="demo-color-box color-dark bg-white">$white<div class="value">#ffffff</div></div>
+                <div class="demo-color-box bg-black">$black<div class="value">#000000</div></div>
+            </div>
+        </div>
+    </div>
+</ql-card>

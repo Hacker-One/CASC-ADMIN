@@ -1,0 +1,126 @@
+// == Rem
+$spacer: 10px;
+$spacers: ();
+$spacers: map-merge((
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3)),
+        $spacers);
+
+// == folder path
+$assets-root: '/assets';
+$images-root: '/img/';
+$fonts-root: '/fonts/';
+
+// == Res
+$resXXL: 1280px;
+$resXL: 1170px;
+$resL: 991px;
+$resM: 768px;
+$resS: 660px;
+$resXS: 500px;
+$resXXS: 435px;
+$resMin: 320px;
+
+// == Classify Color
+$white: #ffffff !default;
+$black: #000000 !default;
+$gray-100: #f8f8f8 !default;
+$gray-200: #efefef !default;
+$gray-300: #dedede !default;
+$gray-400: #cccccc !default;
+$gray-500: #b4b4b4 !default;
+$gray-600: #999999 !default;
+$gray-700: #808080 !default;
+$gray-800: #666666 !default;
+$gray-900: #333333 !default;
+
+$primary: #4d4172;
+$secondary: #f69f00;
+$info: #4fb5dd;
+$success: #76ab3c;
+$warning: #f69f00;
+$danger: #eb3840;
+$default: $white;
+
+$dark: #566a89;
+$darker: #292f43;
+$darkest: #1b2431;
+
+$light: #dbe0e4;
+$lighter: #eef0f2;
+$lightest: #f6f8fa;
+
+
+$theme-colors: ();
+$theme-colors: map-merge((
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark),
+        $theme-colors);
+
+// == Typography
+$font-family: Helvetica, "PingFang SC", "Hiragino Sans GB", "SimHei", Arial, -apple-system, sans-serif;
+$default-text: $gray-800;
+$head-text: #1B2431;
+$sub-text: $dark;
+$help-text: $sub-text;
+$select-text: #33B5D6;
+
+// == Font Size
+$font-size-base: 1.4rem;
+$font-size-sm: 1.2rem;
+$font-size-lg: 1.6rem;
+
+$font-size-h1: 3.6rem;
+$font-size-h2: 2.4rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.6rem;
+$font-size-h5: 1.4rem;
+$font-size-h6: 1.2rem;
+
+// == Font Weight
+$font-weight-base: nomal;
+$font-thin: 100;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: bold;
+$font-bold: 700;
+$font-bolder: 500;
+$font-ultraBold: 900;
+
+
+// == Line
+$divide-line: $light;
+$border-color: $light;
+
+// == Link
+$activelink: $info;
+$hoverlink: lighten($info,20%);
+
+// == Form
+$disabled: #cccccc;
+$disabled-bg: #f5f5f5;
+$border-light: tint($border-color, 15%);
+$input-border: $divide-line;
+$input-background: #ffffff;
+
+// == Table
+$title-bg: $white;
+$row-hover: $lightest;
+$striped-bg: $gray-100;
+$table-border: $border-color;
+
+// == Layout
+$body-bg: #F0F3F4;
+
+// == Side bar
+$sidebar-bg: $darker;

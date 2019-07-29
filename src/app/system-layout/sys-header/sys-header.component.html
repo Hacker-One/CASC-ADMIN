@@ -1,0 +1,18 @@
+<header>
+  <img class="img-logo" src="assets/images/logo.png" />
+
+  <ul class="nav-con">
+    <ng-container *ngFor="let item of menuList;let idx = index;">
+      <li class="fir-nav" (mouseover)="item.isActive=true" (mouseout)="item.isActive=false">
+        <a [routerLink]="[item.menuUrl]" routerLinkActive="active">{{item.desc}}</a>
+        <ul class="sec-nav">
+          <ng-container *ngFor="let tem of item.resourcess;let i = index">
+            <li [style.display]="item.isActive ? 'block': 'none'">
+              <a (click)="goPage(tem)">{{tem.desc}}</a>
+            </li>
+          </ng-container>
+        </ul>
+      </li>
+    </ng-container>
+  </ul>
+</header>

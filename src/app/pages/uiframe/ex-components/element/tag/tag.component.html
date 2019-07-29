@@ -1,0 +1,28 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Tag 标签
+            <small>用于标记和选择。</small>
+        </h2>
+    </div>
+
+    <h3 class="mt-5">基础用法</h3>
+    <ex-demo  [code]="code[0]" notes="由 <code>type</code> 属性来选择 tag 的类型，
+也可以通过 <code>color</code> 属性来自定义背景色。">
+    </ex-demo>
+
+    <h3 class="mt-5">可移除标签</h3>
+    <ex-demo  [code]="code[1]" notes="<code>[closable]</code> 属性可以定义标签是否可移除。
+<code>(close)</code> 属性可以获得每次移除时的事件。">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

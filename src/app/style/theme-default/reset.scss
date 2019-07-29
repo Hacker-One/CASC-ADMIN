@@ -1,0 +1,70 @@
+@import 'common/var';
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-base;
+  font-size: $--font-size-base;
+  color: $--color-black;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $--link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+  }
+
+  &:active {
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //color: $--color-black;
+  font-weight: inherit;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+p {
+  line-height: 1.8;
+  font-size: inherit;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+sup, sub {
+  font-size: #{$--font-size-base - 1px};
+}
+
+small {
+  font-size: #{$--font-size-base - 2px};
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+table{
+  th,td{
+    font-size:$--font-size-base !important;
+    font-weight: normal !important;
+  }
+}

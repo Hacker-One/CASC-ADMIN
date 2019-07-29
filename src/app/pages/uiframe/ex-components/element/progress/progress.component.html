@@ -1,0 +1,33 @@
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Progress 进度条
+            <small>用于展示操作进度，告知用户当前状态和预期。</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">线形进度条 — 百分比外显</h3>
+    <ex-demo [code]="code[0]" notes="<code>[percentage]</code> 属性是必填的，表示进度条对应的百分比。">
+    </ex-demo>
+
+    <h3 class="mt-5">线形进度条 — 百分比内显</h3>
+    <p>百分比不占用额外控件，适用于文件上传等场景</p>
+    <ex-demo [code]="code[1]" notes="可通过 <code>stroke-width</code>
+属性更改进度条的高度，并可通过 <code>text-inside</code> 属性来将进度条描述置于进度条内部">
+    </ex-demo>
+
+    <h3 class="mt-5">环形进度条</h3>
+    <ex-demo [code]="code[2]" notes="可通过 <code>type</code>
+属性来指定使用环形进度条">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

@@ -1,0 +1,208 @@
+@import "../../style/config/config";
+
+@include scrollbars(.5em, $dark, $light);
+
+html {
+  position: relative;
+  min-width: 320px;
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.4rem;
+  font-family: $font-family !important;
+  background:$body-bg;
+}
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: $resMin;
+  font-weight:$font-normal !important;
+  color:$default-text;
+}
+main {
+  min-height: 100%;
+  position: relative;
+  color: $default-text;
+  background-color: $body-bg;
+
+  .additional-bg {
+    display: none;
+  }
+}
+
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+.h1 {
+  margin:0;
+  display:inline-block;
+  font-size: $font-size-h1;
+}
+
+.h2 {
+  display:inline-block;
+  font-size: $font-size-h2;
+}
+
+.h3 {
+  display:inline-block;
+  font-size: $font-size-h3;
+}
+
+.h4 {
+  display:inline-block;
+  font-size: $font-size-h4;
+}
+
+.h5 {
+  display:inline-block;
+  font-size: $font-size-h5;
+}
+
+.h6 {
+  display:inline-block;
+  font-size: $font-size-h6;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+  body {
+    overflow: auto;
+    height: 100%;
+  }
+}
+
+a {
+  transition: color 0.5s ease;
+  outline: 0 !important;
+}
+
+.body-bg {
+  display: none;
+}
+
+.al-header {
+  display: block;
+  height: 49px;
+  margin: 0;
+  background-repeat: repeat-x;
+  position: relative;
+  z-index: 905;
+  color: #444444;
+}
+
+.al-main {
+  top:75px;
+  margin-left: $sidebar-width;
+  padding: 34px 0 34px 0;
+  min-height: 500px;
+  position: relative;
+}
+
+.al-footer {
+  height: 34px;
+  padding: 0 18px 0 ($sidebar-width + 20px);
+  width: 100%;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  font-size: 13px;
+  color: $default-text;
+  transition: padding-left 0.5s ease;
+}
+
+.al-footer-main {
+  float: left;
+  margin-left: 15px;
+}
+
+.al-copy {
+  float: left;
+}
+
+.al-footer-right {
+  float: right;
+  margin-right: 12px;
+  i {
+    margin: 0 4px;
+    color: $danger;
+    font-size: 12px;
+  }
+  a {
+    margin-left: 4px;
+    color: $default-text;
+    &:hover {
+      color: $danger;
+    }
+  }
+}
+
+
+.al-content {
+  padding: 15px;
+}
+
+@media screen and (max-width: $resXS) {
+  .al-content {
+    padding: 8px 20px;
+  }
+}
+
+@media screen and (max-width: $resXXL) {
+  .al-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 590px) {
+  .al-footer-right {
+    float: none;
+    margin-bottom: 19px;
+    margin-right: 0;
+  }
+  .al-footer {
+    height: 76px;
+    text-align: center;
+  }
+  .al-main {
+    padding-bottom: 76px;
+  }
+  .al-footer-main {
+    float: none;
+    display: inline-block;
+  }
+}
+
+.full-invisible {
+  visibility: hidden !important;
+  * {
+    visibility: hidden !important;
+  }
+}
+

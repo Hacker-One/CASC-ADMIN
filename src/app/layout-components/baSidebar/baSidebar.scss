@@ -1,0 +1,271 @@
+@import "../../style/config/config";
+
+$sidebar-scroll-width: 4px;
+$angle-left: '\f100';
+$angle-right: '\f101';
+$sidebar-text:#ffffff;
+@mixin default-sublist() {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: none;
+  &.expanded {
+    display: block;
+  }
+  > ba-menu-item > li {
+    display: block;
+    float: none;
+    padding: 0;
+    border-bottom: none;
+    background-color: #ffffff;
+    position: relative;
+    a {
+      display: block;
+      text-shadow: none;
+      font-size: 13px;
+      text-decoration: none;
+      color: $sidebar-text;
+      padding-left: 52px;
+      height: auto;
+      line-height: 29px;
+      &:hover {
+        color: $primary;
+      }
+    }
+    &.selected:not(.with-sub-menu) > a {
+      border: none;
+      background-color: $primary;
+      &:hover {
+        color: $sidebar-text;
+      }
+    }
+
+  }
+}
+
+:host /deep/ {
+  .qloud-al-sidebar {
+    width: $sidebar-width;
+    top: 60px;
+    left: 0;
+    z-index: 1124;
+    display: block;
+    min-height: 100%;
+    background-color: $qloudSidebar;
+    height: 100%;
+    position: fixed;
+  }
+
+  .qloud-al-sidebar-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .qloud-al-sidebar-sublist .subitem-submenu-list {
+    padding-left: 15px;
+  }
+
+  .subitem-submenu-link {
+    .fa {
+      top: 7px;
+    }
+  }
+
+  .qloud-al-sidebar-list-item {
+    display: block;
+    position: relative;
+    float: none;
+    padding: 0;
+    &.selected:not(.with-sub-menu) {
+      background-color: $darkest;
+      a.qloud-al-sidebar-list-link {
+        color: $sidebar-text;
+        i{
+          color:$warning;
+        }
+        b {
+          color: $sidebar-text;
+        }
+      }
+    }
+  }
+
+  .ba-sidebar-item-expanded {
+    > ul.qloud-al-sidebar-sublist {
+      display: block !important;
+    }
+
+  }
+
+  .qloud-al-sidebar-list-item, .ba-sidebar-sublist-item {
+    &.ba-sidebar-item-expanded {
+      > .qloud-al-sidebar-list-link {
+        b {
+          transform: rotate(180deg);
+        }
+      }
+
+      > .qloud-al-sidebar-sublist {
+        display: block;
+      }
+    }
+  }
+
+  a.qloud-al-sidebar-list-link {
+    display: block;
+    height: 49px;
+    padding-left: 13px;
+    text-shadow: none;
+    font-size: 14px;
+    text-decoration: none;
+    color: $sidebar-text;
+    line-height: 49px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom:1px solid $darkest;
+    &:hover {
+      color: $default;
+      i{
+        color:$warning;
+      }
+      b {
+        color: $primary;
+      }
+    }
+    .menuItem-icon{
+      display:inline-block;
+      width:26px;
+      height:30px;
+      background:url($assets-root + "/images/svg/menuIcon_bg.svg") no-repeat;
+      position: absolute;
+      top:10px;
+      line-height:30px;
+      text-align: center;
+      font-size:12px;
+      .MenuItem-abbr{
+        font-style: normal;
+        font-weight:800;
+        display: block;
+        width: 26px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+    .menuItem-text{
+      margin-left:40px;
+      display: inline-block;
+      width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    i {
+      margin-right: 0px;
+      width: 16px;
+      font-size: unset;
+      display: inline-block;
+      color:$dark;
+    }
+    b {
+      display: block;
+      opacity: 1;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      text-shadow: none;
+      font-size: 18px;
+      position: absolute;
+      right: 10px;
+      top: 18px;
+      padding: 0;
+      text-align: center;
+      color: $sidebar-text;
+      transition: transform 0.2s linear;
+    }
+  }
+
+  .slimScrollBar, .slimScrollRail {
+    border-radius: 0 !important;
+    width: $sidebar-scroll-width !important;
+    left: $sidebar-width - $sidebar-scroll-width;
+  }
+
+  .qloud-al-sidebar-sublist {
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: none;
+    &.expanded {
+      display: block;
+    }
+    > ba-menu-item > li {
+      display: block;
+      float: none;
+      padding: 0;
+      border-bottom: none;
+      background-color: #ffffff;
+      position: relative;
+      a {
+        display: block;
+        text-shadow: none;
+        font-size: 13px;
+        text-decoration: none;
+        color: $sidebar-text;
+        padding-left: 52px;
+        height: auto;
+        line-height: 29px;
+        &:hover {
+          color: $primary;
+        }
+      }
+      &.selected:not(.with-sub-menu) > a {
+        border: none;
+        background-color: $primary;
+        &:hover {
+          color: $sidebar-text;
+        }
+      }
+
+    }
+  }
+
+  .sidebar-hover-elem {
+    width: $sidebar-scroll-width;
+    background: $primary;
+    position: absolute;
+    top: -150px;
+    left: $sidebar-width - $sidebar-scroll-width;
+    transition: all 0.5s ease;
+    transition-property: top, height;
+    height: 42px;
+    display: block;
+  }
+
+  .sidebar-select-elem {
+    display: block;
+    top: 94px;
+  }
+
+  .menu-collapsed {
+    .slimScrollBar, .slimScrollRail {
+      display: none !important;
+    }
+  }
+  .sidebar-options{
+    .mini-toggle-btn{
+      background: $success;
+      border: none;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 3px 6px;
+      line-height: 0;
+      float:right;
+      outline:none !important;
+    }
+  }
+}

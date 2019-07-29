@@ -1,0 +1,43 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Dropdown 下拉菜单
+            <small>将动作或菜单折叠到下拉菜单中。</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">基础用法</h3>
+    <ex-demo [code]="code[0]" [class]="exClass" notes="数据源 <code>model</code>
+需要遵循一定的结构，详见文末的参考">
+    </ex-demo>
+
+    <h3 class="mt-5">触发方式</h3>
+    <p>可以配置 click 激活或者 hover 激活。</p>
+    <ex-demo [code]="code[1]" [class]="exClass" notes="在 <code>trigger</code>属性设置为 <code>click</code> 即可。"></ex-demo>
+
+    <h3 class="mt-5">禁用单项</h3>
+    <p>禁用某一个选项</p>
+    <ex-demo [code]="code[2]" [class]="exClass" notes="设置数据源的某一项 <code>qlDisabled</code>为 <code>true</code> 即可禁用此选项">
+    </ex-demo>
+
+    <h3 class="mt-5">显示分割线</h3>
+    <p>为单个选项增加分割线</p>
+    <ex-demo [code]="code[3]" [class]="exClass" notes="设置数据源的某一项 <code>divided</code>为 <code>true</code> 即可禁用此选项">
+    </ex-demo>
+
+
+    <h3 class="mt-5">按钮模式</h3>
+    <p>可使用按钮触发下拉菜单。</p>
+    <ex-demo [code]="code[4]" [class]="exClass" notes="设置数据源的某一项 <code>divided</code>为 <code>true</code> 即可禁用此选项">
+    </ex-demo>
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

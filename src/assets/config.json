@@ -1,0 +1,27 @@
+{
+  "pluginName": "UI Frame",
+  "pluginIcon": "",
+  "pluginAbbr": "UI",
+  "pluginImg":"/assets/images/svg/profile.svg",
+  "pluginPath": "uiframe",
+  "pluginTab": [
+    {
+      "name": "布局&排版",
+      "url": "#/uiframe/layout"
+    },
+    {
+      "name": "基础组件",
+      "url": "#/uiframe/basic"
+    },
+    {
+      "name": "组合示例",
+      "url": "#/uiframe/examples"
+    },
+    {
+      "name": "更新日志",
+      "url": "#/uiframe/logs"
+    }
+  ]
+}
+
+

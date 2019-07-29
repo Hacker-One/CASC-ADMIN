@@ -1,0 +1,56 @@
+
+@import "../../../../../style/config/config";
+
+.demo-color-box {
+  border-radius: 4px;
+  padding: 20px;
+  height: 74px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  & .value {
+    font-size: 12px;
+    opacity: 0.69;
+    line-height: 24px;
+  }
+}
+
+.demo-color-box-group {
+  .demo-color-box {
+    border-radius: 0;
+  }
+  .demo-color-box:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+  .demo-color-box:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+
+.bg-gray-100{background-color:$gray-100}
+.bg-gray-200{background-color:$gray-200}
+.bg-gray-300{background-color:$gray-300}
+.bg-gray-400{background-color:$gray-400}
+.bg-gray-500{background-color:$gray-500}
+.bg-gray-600{background-color:$gray-600}
+.bg-gray-700{background-color:$gray-700}
+.bg-gray-800{background-color:$gray-800}
+.bg-gray-900{background-color:$gray-900}
+.bg-black {
+  background-color: $black;
+}
+
+
+.bg-light{background-color:$light}
+.bg-lighter{background-color:$lighter}
+.bg-lightest{background-color:$lightest}
+
+.bg-dark{background-color:$dark}
+.bg-darker{background-color:$darker}
+.bg-darkest{background-color:$darkest}
+
+
+.color-dark {
+  color: $darkest;
+}

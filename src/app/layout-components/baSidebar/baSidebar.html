@@ -1,0 +1,10 @@
+<aside class="qloud-al-sidebar">
+  <ba-menu [menuHeight]="menuHeight"
+           [sidebarCollapsed]="isMenuCollapsed"
+           (expandMenu)="menuExpand()"></ba-menu>
+    <div class="sidebar-options">
+        <button class="mini-toggle-btn" (click)="menuToggle()">
+            <i class="fa" [ngClass]="{'fa-chevron-circle-left': !isMenuCollapsed, 'fa-chevron-circle-right': isMenuCollapsed}"></i>
+        </button>
+    </div>
+</aside>

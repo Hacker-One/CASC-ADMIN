@@ -1,0 +1,63 @@
+@import "../../style/config/config";
+.qloud-page-top {
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 9000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 60px;
+  width: 100%;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+a.qloud-al-logo {
+  color: $primary;
+  display: block;
+  padding: 0 0 0 1rem;
+  font-size: 24px;
+  white-space: nowrap;
+  float: left;
+  line-height: 60px;
+}
+
+a.qloud-al-logo .qloud-al-logo-img{
+  width:auto;
+  height:50px;
+  margin-bottom:5px;
+}
+a.qloud-al-logo span {
+  color: #ffffff;
+}
+
+.qloud-page-top-option-bar {
+  float: right;
+  min-width: 230px;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.qloud-page-top-menu {
+  width: 60px;
+  height: 60px;
+  float: right;
+  line-height: 60px;
+  text-align: center;
+  position: relative;
+}
+.qloud-page-top-menu:hover {
+  background: #f5f5f5;
+}
+
+.qloud-al-user-profile {
+  transition: all .15s ease-in-out;
+  opacity: 1 !important;
+  position: relative;
+}
+
+.qloud-al-user-profile .user-avatar img{
+    border: 3px solid #ffffff;
+}

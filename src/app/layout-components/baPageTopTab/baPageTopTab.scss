@@ -1,0 +1,101 @@
+@import "../../style/config/config";
+
+.page-top-tab {
+  width: 100%;
+  top: 60px;
+  left: 0;
+  padding-left: $sidebar-width;
+  position: fixed;
+  z-index: 1123 !important;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 49px;
+  padding: 0;
+  background: $gray-100;
+  border-bottom: 1px solid $border-color;
+  position: relative !important;
+  .swiper-wrapper {
+    position: absolute !important;
+    margin: 0 35px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide:hover {
+  background: $lighter;
+}
+
+.swiper-slide:hover a, .swiper-slide a {
+  width: 100%;
+  height: 100%;
+  line-height: 49px;
+  color: $default-text;
+  font-size: 16px;
+}
+
+.swiperButton {
+  color: $warning;
+  height: 50px !important;
+  background: $gray-100 !important;
+  border: unset;
+  max-width: 35px !important;
+  padding: 0 !important;
+  margin: 0;
+  position: absolute !important;
+  top:0;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.qloud-btn-primary:focus, .qloud-btn-primary.focus {
+  box-shadow: unset !important;
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+  opacity: 0.65;
+  cursor: pointer;
+  pointer-events: none !important;
+}
+
+.tabSelect {
+  border: none !important;
+  line-height: 49px;
+  a{
+    color:$darkest;
+    font-weight:400;
+  }
+  a:after {
+    width:100%;
+    height:3px;
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:0;
+    background: $warning;
+  }
+}
+

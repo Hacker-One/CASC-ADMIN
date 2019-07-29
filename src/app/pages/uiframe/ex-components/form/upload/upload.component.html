@@ -1,0 +1,51 @@
+
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Upload 上传
+            <small>通过点击或者拖拽上传文件</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">点击上传</h3>
+    <ex-demo  [code]="code[0]" [class]="exClass" notes="<code>[upload-filter]</code>
+是用于上传过滤的中间件，你可以根据此自定义一些标准，返回 <code>false</code> 会阻止上传动作。">
+    </ex-demo>
+
+
+    <h3 class="mt-5">用户头像上传</h3>
+    <ex-demo  [code]="code[1]" [class]="exClass">
+    </ex-demo>
+
+
+    <h3 class="mt-5">照片墙</h3>
+    <p>使用 <code>list-type</code> 属性来设置文件列表的样式。</p>
+    <ex-demo  [code]="code[2]" [class]="exClass" notes="移除或是点击等操作都可以
+获得相应的事件，事件参数请参见文末属性表。">
+    </ex-demo>
+
+
+
+    <h3 class="mt-5">图片列表缩略图</h3>
+    <ex-demo  [code]="code[3]" [class]="exClass" notes="<code>[list-type]</code>
+的改变只是样式与布局上的，所有类型的事件与参数都是相同的。">
+    </ex-demo>
+
+    <h3 class="mt-5">拖拽上传</h3>
+    <ex-demo  [code]="code[4]" [class]="exClass" notes="设置 <code>[drag]</code>
+为 <code>true</code> 即可开启拖拽模式。">
+    </ex-demo>
+
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+
+</ql-card>

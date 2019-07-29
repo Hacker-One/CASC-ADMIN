@@ -1,0 +1,13 @@
+@import "../../style/config/config";
+
+.user-avatar{
+  img{
+    border:1px solid $border-color;
+    border-radius: 4px;
+  }
+}
+.circle{
+  img{
+    border-radius: 50% !important;
+  }
+}

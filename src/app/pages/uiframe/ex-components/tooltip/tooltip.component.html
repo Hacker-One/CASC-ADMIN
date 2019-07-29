@@ -1,0 +1,39 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Tooltip 文字提示
+        </h2>
+    </div>
+
+    <div class="help-standard-content">
+        <ul class="mt-4">
+            <li>常用于展示鼠标 hover 时的提示信息。与html标签内属性<code>title="bulabula..."</code>不同的是，后者用于显示标签内省略的实际内容和图标按钮的文字解释</li>
+        </ul>
+    </div>
+
+    <h3 class="mt-5">基础用法</h3>
+    <p>在这里我们提供 9 种不同方向的展示方式，可以通过以下完整示例来理解，选择你要的效果。</p>
+    <ex-demo  [code]="code[0]" notes="使用 <code>ng-template</code> 的 <code>#tip</code>
+属性来决定 hover 时的提示信息或模板。由 <code>placement</code> 属性决定展示效果，提示框体展示的位置与朝向。具体请参阅组件接口文档。">
+    </ex-demo>
+
+    <h3 class="mt-5">主题</h3>
+    <p>Tooltip 组件提供了两个不同的主题：<code>dark</code> 和 <code>light</code>。</p>
+    <ex-demo  [code]="code[1]" notes="通过设置 <code>effect</code> 属性来改变主题，默认为 <code>dark</code>">
+    </ex-demo>
+
+    <h3 class="mt-5">禁用</h3>
+    <p>设置提示禁用</p>
+    <ex-demo  [code]="code[2]" notes="设置禁用后不会影响内容本身的响应，但不再弹出提示。">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

@@ -1,0 +1,72 @@
+<ql-card class="box-card ">
+    <div class="card-title mb-5">
+        <h2>
+            Table 表格
+            <small>用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作。</small>
+        </h2>
+    </div>
+    <div class="help-standard-content">
+        <ul>
+            <li>操作栏内的操作不要使用图标按钮，统一使用文字按钮。并且能简短并清楚表达该操作，不能超过6个字。<code>.ql-button.ql-button--text.ql-button--small</code></li>
+            <li>列表一列数不可控，默认展示范围：3-8列，若出现更多，可固定重要列，剩余列滚动条展示</li>
+            <li>列表的宽度占比宽度自适应，但根据字段的重要性显示，重要字段优先完整显示</li>
+            <li>表头列标题最多输入8个字符</li>
+            <li>文字类信息根据产品要求字数，超过宽度限以”…“代替，鼠标经过展示全部内容</li>
+            <li>数字/英文/符号的组合形式，表示编号类信息的字符全部展示，不可省略</li>
+            <li>表格某部分无数据时用”-“来填充显示，不能出现”null””undefined”，对于空字符串””数据显示为空白。对于数据为零的单元格，填上0</li>
+            <li>前端数据的重组和数值替换，应当在nodeJs端完成，不得在angualr端转换和重组。</li>
+            <!--<li>表格数值型内容右对齐，非数值型左对齐。</li>-->
+            <li>新建和批量操作的按钮组在表格上显示，并右对齐。</li>
+            <li>复杂查询条件的组在新建和批量操作按钮组之上显示，并左对齐。</li>
+            <li>简单查询条件的组与新建和批量操作按钮组在同一个row，各占50%显示。</li>
+            <li>开发人员使用时请统一使用<code> [stripe]="true" [border]="true" </code>带边框和斑马纹的表格样式</li>
+            <li>表格内容超过一屏需要显示竖向滚动条时，需要固定表头和页码。只需滚动表体内容部分</li>
+        </ul>
+    </div>
+
+    <h3 class="mt-5 mb-3">基础用法</h3>
+    <p>如果存在 ql-table-column 未设置宽度，将会自动计算宽度，同时也不会固定显示表格的总宽度。<br/>
+        <!--对于纯数字类型的column会默认使用右对齐，以便用户查看比对数字大小。其余类型column默认使用左对齐。序号和复选框类型默认使用居中对齐。<br/>-->
+        当数据为 HTML 时，在<code>&lt;ql-table-column&gt;</code>中使用<code>[render-html]="true"</code></p>
+    <ex-demo [code]="code[0]" [class]="exClass" notes="当 <code>ql-table</code>
+元素中注入 <code>model</code> 对象数组后，在 <code>ql-table-column</code> 中用 <code>model-key</code>
+属性来对应对象中的键名即可填入数据">
+    </ex-demo>
+<!--
+
+    <h3 class="mt-5">带状态表格</h3>
+    <p>可将表格内容 highlight 显示，方便区分「成功、信息、警告、危险」等内容。适用于需要突出状态的数据项。</p>
+    <ex-demo [code]="code[1]" [class]="exClass" notes="属性 <code>row-class-name</code>
+接受一个函数来标识更多的 css 类名。当然不要忘了为你的自定义类名补充样式。">
+    </ex-demo>
+-->
+
+
+    <h3 class="mt-5">固定表头</h3>
+    <ex-demo [code]="code[2]" [class]="exClass" notes="指定高度可自动固定表头">
+    </ex-demo>
+
+
+    <h3 class="mt-5">多级表头</h3>
+    <p>数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。</p>
+    <ex-demo [code]="code[3]" [class]="exClass" notes="注意单个 <code>ql-table-column</code>
+不要再次嵌套。">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+    <h3 class="mt-5">{{apidoc2.name}}</h3>
+    <ql-table [model]="apidoc2.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

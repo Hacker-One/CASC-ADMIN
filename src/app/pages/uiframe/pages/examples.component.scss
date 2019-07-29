@@ -1,0 +1,27 @@
+@import "../../../style/config/config";
+.buttons-style {
+  .table {
+    & > th, td {
+      padding: 1rem;
+      &:first-child {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.table-search-group{
+  td{
+    padding:5px 20px;
+  }
+  .list-inline{
+    padding:0;
+    margin:0;
+  }
+  .search-type{
+    background:$title-bg;
+    min-width:100px;
+    text-align:center;
+    font-weight:$font-bold;
+  }
+}

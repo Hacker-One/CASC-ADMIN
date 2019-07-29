@@ -1,0 +1,58 @@
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Select 选择器
+            <small>当选项过多时，使用下拉菜单展示并选择内容。</small>
+        </h2>
+    </div>
+    <h3 class="mt-5">基础用法</h3>
+    <p>适用广泛的基础用法。</p>
+    <ex-demo  [code]="code[0]" [class]="exClass" notes="<code>ql-option</code> 的属性
+<code>label</code>和<code>value</code>是必填的。">
+    </ex-demo>
+
+    <h3 class="mt-5">有禁用选项</h3>
+    <ex-demo  [code]="code[1]" notes="在<code>ql-option</code>中，设定
+<code>qlDisabled</code>值为 true，即可禁用该选项。">
+    </ex-demo>
+
+    <h3 class="mt-5">禁用状态</h3>
+    <p>选择器不可用状态。</p>
+    <ex-demo  [code]="code[2]" notes="在<code>ql-option</code>中，设定
+<cod<code>qlDisableed/code>值为 true，即可禁用该选项。">
+    </ex-demo>
+
+    <h3 class="mt-5">默认选中</h3>
+    <p>初始状态时默认选中值。</p>
+<ex-demo  [code]="code[3]" notes="在<code>ql-option</code>中，设定
+model 初始值等于需中项的/code>值为 true，即可禁用该选项。">
+</ex-demo>
+
+    <h3 class="mt-5">可清空单选</h3>
+    <p>包含清空按钮，可将选择器清空为初始状态</p>
+    <ex-demo  [code]="code[4]" notes="在<code>ql-select</code>中，设定
+<code>clearable</code>值为 true，则可将选择器清空。">
+    </ex-demo>
+
+    <h3 class="mt-5">多选</h3>
+    <ex-demo  [code]="code[5]" [class]="exClass" notes="开启多选时，清空按钮是不可用的">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+    <h3 class="mt-5">{{apidoc2.name}}</h3>
+    <ql-table [model]="apidoc2.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

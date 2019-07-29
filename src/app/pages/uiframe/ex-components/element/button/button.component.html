@@ -1,0 +1,71 @@
+<ql-card class="box-card buttons-style">
+    <div class="card-title mb-5">
+        <h2>
+            Button 按钮
+        </h2>
+    </div>
+
+    <div class="help-standard-content">
+        <ul class="mt-4">
+            <li>按钮内的文字不得超过6个字。</li>
+            <li>圆角按钮适用于装饰性较强的位置做功能区分，推荐单个按钮或两个按钮时使用，不要超过3个排列。</li>
+        </ul>
+    </div>
+    <h3 class="mt-5">基础用法</h3>
+    <ul class="mt-3">
+    </ul>
+    <ex-demo [code]="code[0]" notes="Button 组件默认提供7种主题，由 <code>type</code> 属性来定义，默认为 <code>default</code>。">
+    </ex-demo>
+
+    <h3 class="mt-5">禁用状态</h3>
+    <p>按钮不可用状态。</p>
+    <ex-demo [code]="code[1]" notes="<code>[qlDisabled]='true'</code> ">
+    </ex-demo>
+
+    <h3 class="mt-5">按钮颜色使用范围</h3>
+
+    <div class="help-standard-content">
+        <ul class="mt-3">
+            <li>不同的颜色倾向代表不同的提示</li>
+            <li><span class="text-primary">Primary</span> 需要引导步骤的按钮。列:"确定", "保存", "下一步"</li>
+            <li><span class="text-success">Success</span> 提示成功并结束的按钮。列:"完成", "结束", "通过"</li>
+            <li><span class="text-info">Info</span> 提示会有页面跳转或弹出的按钮。列:"详情", "查看", "Go!"</li>
+            <li><span class="text-danger">Danger</span> 提示谨慎操作或否定的按钮。列:"删除", "清除", "禁用"</li>
+            <li><span class="text-warning">Warning</span> 需要强调和引起重视的按钮。列:"驳回", "重置"</li>
+        </ul>
+    </div>
+    <ex-demo [code]="code[2]">
+    </ex-demo>
+
+    <h3 class="mt-5">按钮组</h3>
+    <p>以按钮组的方式出现，常用于多项类似操作。</p>
+    <ex-demo [code]="code[3]">
+    </ex-demo>
+
+    <h3 class="mt-5">不同尺寸</h3>
+
+    <div class="help-standard-content">
+        <ul class="mt-3">
+            <li>Button 组件提供除了默认值以外的两种尺寸，可以在不同场景下选择合适的按钮尺寸。</li>
+            <li>小型按钮：title或工具栏内使用</li>
+            <li>超小按钮：表格内使用</li>
+            <li>正常按钮：除上述以外的其它地方使用</li>
+        </ul>
+    </div>
+    <ex-demo [code]="code[4]">
+    </ex-demo>
+
+    <h3 class="mt-5">加载中按钮</h3>
+    <p>点击按钮后进行数据加载操作，在按钮上显示加载状态。</p>
+    <ex-demo [code]="code[5]">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+</ql-card>

@@ -1,0 +1,52 @@
+
+
+<ql-card class="box-card">
+    <div class="card-title">
+        <h2>
+            Steps 步骤条
+            <small>引导用户按照流程完成任务的分步导航条，可根据实际应用场景设定步骤，至少需要 2 步</small>
+        </h2>
+    </div>
+
+
+    <h3 class="mt-5">基础用法</h3>
+    <ex-demo  [code]="code[0]" [class]="ExClass">
+    </ex-demo>
+
+    <h3 class="mt-5">含状态步骤条</h3>
+    <p>每一步骤显示出该步骤的状态。</p>
+    <ex-demo  [code]="code[1]"></ex-demo>
+
+
+    <h3 class="mt-5">有描述的步骤条</h3>
+    <p>每个步骤有其对应的步骤状态描述。</p>
+    <ex-demo  [code]="code[2]">
+    </ex-demo>
+
+
+    <h3 class="mt-5">竖式步骤条</h3>
+    <p>竖直方向的步骤条。</p>
+    <ex-demo  [code]="code[4]">
+    </ex-demo>
+
+    <h3 class="mt-5">{{apidoc.name}}</h3>
+    <ql-table [model]="apidoc.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+
+
+    <h3 class="mt-5">{{apidoc2.name}}</h3>
+    <ql-table [model]="apidoc2.attrs" [border]="true" [stripe]="true">
+        <ql-table-column model-key="name" label="参数"></ql-table-column>
+        <ql-table-column width="700" model-key="notes" label="说明"></ql-table-column>
+        <ql-table-column model-key="type" label="类型"></ql-table-column>
+        <ql-table-column model-key="enum" label="可选值"></ql-table-column>
+        <ql-table-column model-key="default" label="默认值"></ql-table-column>
+    </ql-table>
+
+</ql-card>
+
