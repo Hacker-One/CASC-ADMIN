@@ -17,8 +17,12 @@ export class HttpService {
   * @param {string} url
   * @returns {Observable<any>}
   */
-  getCommonPost(params: {}, url: string): Observable<any> {
-    return this.hc.post<{}>(url, params, this.httpOptions);
+  // post(url: string, params: Object = {}): Observable<any> {
+  //   return this.hc.post(url, JSON.stringify(params));
+  // }
+
+  post(url: string, body: Object = {}): Observable<any> {
+    return this.hc.post(url, body)
   }
 
   /**
@@ -26,8 +30,12 @@ export class HttpService {
    * @param {string} url
    * @returns {Observable<any>}
    */
-  getCommonGet(url: string): Observable<any> {
+  get(url: string): Observable<any> {
     return this.hc.get<{}>(url);
+  }
+
+  put(url: string, body: Object = {}): Observable<any> {
+    return this.hc.put(url, body);
   }
 
 

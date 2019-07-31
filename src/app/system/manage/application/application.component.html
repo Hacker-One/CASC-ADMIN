@@ -18,12 +18,15 @@
     <ng-container *ngFor="let element of tableDatas;let index = index;">
       <tr [ngClass]="{'hidden':hideLine(element)}">
         <th scope="row" (click)="rowClick(element)">{{element.resourcess.length>0?'+':''}}</th>
-        <td>{{element.desc}}</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Mark</td>
-        <td>{{element.state==1?'有效':'无效'}}</td>
-        <td><a href="void(0)">详情</a>&nbsp;|&nbsp;<a>设置无效</a></td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}">{{element.desc}}</td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}"></td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}">{{element.action}}</td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}"></td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}">{{element.state==1?'有效':'无效'}}</td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}">
+          <!-- <a href="javascript:void(0)">详情</a> -->
+          &nbsp;|&nbsp;<a>设置无效</a>
+        </td>
       </tr>
     </ng-container>
   </tbody>

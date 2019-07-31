@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { UserSafeHooks } from '../../../../app/components/tree/tree';
+import { HttpService } from '../../../system/share/http.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-role',
@@ -8,6 +10,7 @@ import { UserSafeHooks } from '../../../../app/components/tree/tree';
 })
 export class RoleComponent implements OnInit, AfterViewInit {
   authorityDialog = false;
+  roleDatas = [];
   data3: any = [{
     label: '一级 1',
     id: '1.1.1',
@@ -36,12 +39,20 @@ export class RoleComponent implements OnInit, AfterViewInit {
   }, {
     id: '1.3.1',
     label: '一级 3',
-  }]
+  }];
   @ViewChild('tree') tree: ElementRef
   hooks: UserSafeHooks
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
+    this.getList();
+  }
+
+  getList() {
+    const url = `${environment.apiURl.getRoleList}`;
+    this.http.get(url).subscribe(res => {
+      this.roleDatas = res.resources;
+    })
   }
 
   ngAfterViewInit(): void {
@@ -61,14 +72,12 @@ export class RoleComponent implements OnInit, AfterViewInit {
       this.removeNeedless(element);
     })
     console.log(treeArr);
-
   }
 
   removeNeedless(arrItem) {
     delete arrItem['_indeterminate'];
     delete arrItem['_level'];
     delete arrItem['expanded'];
-    arrItem['checked'] = true;
     if (arrItem['children'] && arrItem['children'].length) {
       arrItem['children'].map((element) => {
         this.removeNeedless(element);

@@ -28,7 +28,7 @@ import { AppTranslationModule } from './app.translation.module';
 import { CommonModule } from '@angular/common';
 import { ProdPages } from './pages/prodPages.component';
 import { Pages } from './pages/pages.component';
-import { HomeComponent } from './system/home/home.component';
+// import { HomeComponent } from './system/home/home.component';
 import { ShareModule } from './system/share/share.module';
 
 
@@ -56,7 +56,6 @@ export type StoreType = {
         App,
         ProdPages,
         Pages,
-        HomeComponent
     ],
     imports: [ // import Angular's modules
         CommonModule,

@@ -12,6 +12,7 @@ import { ApplicationDirectoryComponent } from './application/application-directo
 import { ApplicationLinkComponent } from './application/application-link/application-link.component';
 import { RoleComponent } from './role/role.component';
 import { AccountDetailComponent } from './account/account-detail/account-detail.component';
+import { RoleNewEditComponent } from './role/role-new-edit/role-new-edit.component';
 // import { ShareModule } from '../share/share.module';
 
 @NgModule({
@@ -22,6 +23,6 @@ import { AccountDetailComponent } from './account/account-detail/account-detail.
     // ShareModule,
     ManageRoutingModule
   ],
-  declarations: [ApplicationComponent, AccountComponent, AuthorityComponent, ColumnComponent, ApplicationDirectoryComponent, ApplicationLinkComponent, RoleComponent, AccountDetailComponent]
+  declarations: [ApplicationComponent, AccountComponent, AuthorityComponent, ColumnComponent, ApplicationDirectoryComponent, ApplicationLinkComponent, RoleComponent, AccountDetailComponent, RoleNewEditComponent]
 })
 export class ManageModule { }

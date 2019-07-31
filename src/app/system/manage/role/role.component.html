@@ -1,3 +1,6 @@
+<div class="page-btn-line">
+  <ql-button [routerLink]="[ '/manage/role-new-edit' ]" type="info" size="small">新建角色</ql-button>
+</div>
 <div class="search-box mb-20">
   <div class="form-group row">
     <label for="account" class="col-sm-1 col-form-label">账号</label>
@@ -37,15 +40,16 @@
     </tr>
   </thead>
   <tbody>
-    <ng-container>
+    <ng-container *ngFor="let element of roleDatas;let index = index;">
       <tr>
-        <th scope="row">1</th>
-        <td>role</td>
-        <td>x101</td>
-        <td>zwe</td>
-        <td>有效</td>
+        <th scope="row">{{index}}</th>
+        <td>{{element.displayName}}</td>
+        <td>{{element.appExtId}}</td>
+        <td>{{element.externalId}}</td>
+        <td>{{element.state==1?'有效':'无效'}}</td>
         <td>
-          <a href="javascript:void(0)" (click)="authorityDialog = true">详情</a>
+          <!-- <a href="javascript:void(0)">详情</a> -->
+          <a href="javascript:void(0)" (click)="authorityDialog = true">设置权限</a>
         </td>
       </tr>
     </ng-container>

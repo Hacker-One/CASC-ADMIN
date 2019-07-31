@@ -1,4 +1,4 @@
-import {Injectable, EventEmitter} from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import {
     HttpEvent,
     HttpInterceptor,
@@ -7,11 +7,11 @@ import {
     HttpResponse,
     HttpErrorResponse
 } from '@angular/common/http';
-import {NgxSpinnerService} from 'ngx-spinner';
-import {Observable} from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Observable } from 'rxjs';
 import 'rxjs/add/operator/do';
-import {Router} from '@angular/router';
-import {LocalStorage} from './local.storage';
+import { Router } from '@angular/router';
+import { LocalStorage } from './local.storage';
 
 @Injectable()
 export class AppInterceptor implements HttpInterceptor {
@@ -28,18 +28,20 @@ export class AppInterceptor implements HttpInterceptor {
             if (event instanceof HttpResponse) {
                 this.spinner.hide();
             }
-            // if(event){
-            // 	if(event['body']){
-            // 		if(event['body']['code']){
-            // 			if(event['body']['code']=='unlogin'){
-            // 				this.localStorage.remove("user");
-            // 				this.router.navigate(['/']);
-            // 			}
-            // 		}
-            // 	}
-            // }
+            if (event) {
+                // 	if(event['body']){
+                // 		if(event['body']['code']){
+                // 			if(event['body']['code']=='unlogin'){
+                // 				this.localStorage.remove("user");
+                // 				this.router.navigate(['/']);
+                // 			}
+                // 		}
+                // 	}
+                console.log(event);
+            }
         }, (err: any) => {
             if (err instanceof HttpErrorResponse) {
+                console.log(err);
                 const started = Date.now();
                 const elapsed = Date.now() - started;
                 console.log(`Request for ${req.urlWithParams} failed after ${elapsed} ms.`);

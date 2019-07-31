@@ -6,6 +6,7 @@ import { ApplicationLinkComponent } from './application/application-link/applica
 import { AccountComponent } from './account/account.component';
 import { RoleComponent } from './role/role.component';
 import { AccountDetailComponent } from './account/account-detail/account-detail.component';
+import { RoleNewEditComponent } from './role/role-new-edit/role-new-edit.component';
 
 const routes: Routes = [
   // { path: '', component: ApplicationComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'account-list', component: AccountComponent },
   { path: 'account-detail/:id', component: AccountDetailComponent },
   { path: 'role-list', component: RoleComponent },
+  { path: 'role-new-edit', component: RoleNewEditComponent },
 ];
 
 @NgModule({

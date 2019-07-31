@@ -33,6 +33,7 @@ export class PathNavComponent implements OnInit {
   }
 
   setPathArr(url, menuArr) {
+    if (!url) { url = '/home-right' };
     this.pathArr = [];
     for (let elementLV1 of menuArr) {
       if (elementLV1.action == url) {
@@ -63,7 +64,9 @@ export class PathNavComponent implements OnInit {
   }
 
   handle(path: string): void {
-    this.router.navigate([path]);
+    if (path) {
+      this.router.navigate([path]);
+    }
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../../../environments/environment';
 import { HttpService } from '../../../../system/share/http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-application-directory',
@@ -13,18 +14,18 @@ export class ApplicationDirectoryComponent implements OnInit {
     desc: '',
     pdesc: '',
     sortNum: null,
-    rExtId: []
+    rExtIds: []
   }
   roleCheckBoxArr: Array<any> = [];
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit() {
     this.getRoles();
   }
 
   getRoles() {
-    const url = `http://qmsauthz.qloud-qloud.service.sd/applications/7012984/roles`;
-    this.http.getCommonGet(url).subscribe(res => {
+    const url = `${environment.apiURl.getRoleList}`;
+    this.http.get(url).subscribe(res => {
       console.log(res);
       this.roleCheckBoxArr = res.resources;
       this.roleCheckBoxArr.map(item => {
@@ -35,21 +36,23 @@ export class ApplicationDirectoryComponent implements OnInit {
 
   checkboxClicked(idx, evt) {
     console.log(evt);
-    this.roleCheckBoxArr[idx].selected = true;
+    this.roleCheckBoxArr[idx].selected = event.target['value'];
     console.log(this.roleCheckBoxArr);
   }
 
   save() {
     for (let item of this.roleCheckBoxArr) {
       if (item.selected) {
-        this.directoryObj.rExtId.push(item.appExtId);
+        this.directoryObj.rExtIds.push(item.externalId);
       }
     };
     console.log(this.directoryObj);
-    
+
     const url = `${environment.apiURl.saveDirectory}`;
-    this.http.getCommonPost(this.directoryObj, url).subscribe(res => {
+    this.http.post(url, this.directoryObj).subscribe(res => {
       console.log(res);
+      alert('save success');
+      this.router.navigate(['/manage/applicat-list']);
     })
   }
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../system/share/http.service';
 import { environment } from '../../../../environments/environment';
 import { Router } from '@angular/router';
+import { GlobalState } from '../../../../app/global.state';
 
 @Component({
   selector: 'app-application',
@@ -12,7 +13,7 @@ export class ApplicationComponent implements OnInit {
 
   tableDatas = [];
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private _state: GlobalState) { }
 
   ngOnInit() {
     this.getList();
@@ -20,14 +21,15 @@ export class ApplicationComponent implements OnInit {
 
   getList() {
     const url = `${environment.apiURl.getSysMenus}/fangshufeng`;
-    this.http.getCommonGet(url).subscribe(res => {
-      res.map((item) => {
+    this.http.get(url).subscribe(res => {
+      this._state.notifyDataChanged('menu.data', res.result);
+      res.result.map((item) => {
         if (!item.hasOwnProperty('resourcess')) {
           return item['resourcess'] = [];
         }
         return item;
       });
-      res.forEach((element, index) => {
+      res.result.forEach((element, index) => {
         if (element['resourcess'].length > 0) {
           element['expandKey'] = `epGroup${index}`;
           element['hierarchy'] = 'parent';
@@ -60,7 +62,7 @@ export class ApplicationComponent implements OnInit {
 
   rowClick(ele) {
     console.log(ele);
-    
+
     let currentExpandKey = ele.expandKey;
     if (ele.expandKey !== '') {
       if (ele.hierarchy == 'parent') {

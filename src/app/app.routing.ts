@@ -5,13 +5,13 @@ import { PLUGIN_MODULE } from './pages/pages.menu';
 import { environment } from '../environments/environment';
 import { ProdPages } from './pages/prodPages.component';
 import { Pages } from './pages/pages.component';
-import { HomeComponent } from './system/home/home.component';
+// import { HomeComponent } from './system/home/home.component';
 
 
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        loadChildren: './system/home/home.module#HomeModule'
     },
     {
         path: 'manage',
