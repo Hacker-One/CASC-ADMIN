@@ -12,7 +12,11 @@ import { GlobalState } from '../../../app/global.state';
 export class SysHeaderComponent implements OnInit {
   menuList = [];
 
-  constructor(private http: HttpService, private router: Router, private _state: GlobalState) { }
+  constructor(private http: HttpService, private router: Router, private _state: GlobalState) {
+    this._state.subscribe('menu.data', (menuData) => {
+      this.menuList = menuData;
+    })
+  }
 
   ngOnInit() {
     this.getTopMenu();
@@ -174,5 +178,6 @@ export class SysHeaderComponent implements OnInit {
     console.log(item);
     this.router.navigate([`${item.action}`])
   }
+
 
 }

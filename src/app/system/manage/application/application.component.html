@@ -5,6 +5,7 @@
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th></th>
       <th>名称</th>
       <th>类型</th>
       <th>排序</th>
@@ -19,6 +20,7 @@
       <tr [ngClass]="{'hidden':hideLine(element)}">
         <th scope="row" (click)="rowClick(element)">{{element.resourcess.length>0?'+':''}}</th>
         <td [ngClass]="{'td-lv2':element.hierarchy=='children'}">{{element.desc}}</td>
+        <td [ngClass]="{'td-lv2':element.hierarchy=='children'}"></td>
         <td [ngClass]="{'td-lv2':element.hierarchy=='children'}"></td>
         <td [ngClass]="{'td-lv2':element.hierarchy=='children'}">{{element.action}}</td>
         <td [ngClass]="{'td-lv2':element.hierarchy=='children'}"></td>

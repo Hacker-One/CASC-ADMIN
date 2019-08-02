@@ -12,10 +12,10 @@ export class ApplicationLinkComponent implements OnInit {
   roleCheckBoxArr: Array<any> = [];
   directorySelectArr: Array<any> = [];
   linkObj = {
-    parentId: "cfe120530d4145619cfcc7a4326d1e58",
+    parentId: '',
     desc: '',
     sortNum: null,
-    menuUrl: '',
+    action: '',
     isView: 1,
   }
 
@@ -50,7 +50,7 @@ export class ApplicationLinkComponent implements OnInit {
 
   urlChange(evt) {
     console.log(evt);
-    this.linkObj.menuUrl = evt.target.value;
+    this.linkObj.action = evt.target.value;
   }
   radioChange(evt) {
     console.log(evt);

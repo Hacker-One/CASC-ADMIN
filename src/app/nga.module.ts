@@ -42,6 +42,7 @@ import { BaNoticeService } from './rests/services/baNotice/baNotice.service';
 // import {MDBBootstrapModulesPro} from 'ng-uikit-pro-standard';
 import { WebsocketService } from './rests/services/baWebSocket/websocket.service';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { QlModule } from './qloud-angular.module';
 
 const NGA_COMPONENTS = [
     BaBackTop,
@@ -97,6 +98,7 @@ const NGA_VALIDATORS = [
         SwiperModule,
         ReactiveFormsModule,
         AppTranslationModule,
+        QlModule
     ],
     exports: [
         ...NGA_DIRECTIVES,

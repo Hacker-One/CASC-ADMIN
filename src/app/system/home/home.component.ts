@@ -21,16 +21,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterContentInit() {
-    const factory = this.factoryResolver.resolveComponentFactory(TextNewsComponent);
-    let component = this.dynamicContainer.createComponent(factory);
-    console.log(component);
-    component.instance.serverUrl = 'api/xxx'
+    // const factory = this.factoryResolver.resolveComponentFactory(TextNewsComponent);
+    // let component = this.dynamicContainer.createComponent(factory);
+    // console.log(component);
+    // component.instance.serverUrl = 'api/xxx'
 
-    console.log(this.tplR);
-    // this.tplR.createEmbeddedView(null);
     // console.log(this.tplR);
-    this.tplR.createEmbeddedView(this.tpl);
-    console.log(this.tplR);
+    // // this.tplR.createEmbeddedView(null);
+    // // console.log(this.tplR);
+    // this.tplR.createEmbeddedView(this.tpl);
+    // console.log(this.tplR);
   }
 
 
